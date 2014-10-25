@@ -1,13 +1,73 @@
 <html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+$( document ).ready(function() {
+	var kysymys1 = { teksti: "AKELA", 
+					vaihtoehto1: {teksti: "sudenpentulauman johtaja", oikein: true}, 
+					vaihtoehto2: {teksti: "vasaraa muistuttava työkalu", oikein: false}, 
+					vaihtoehto3: {teksti: "vanhempainyhdistyksen puheenjohtaja", oikein: false}}
+	var kysymys2 = { teksti: "SAMPO", 
+	                vaihtoehto1: {teksti: "Kalevala-aiheinen huiviholkki", oikein: false},
+					vaihtoehto2: {teksti: "seikkailijajoukkueen johtaja", oikein: true}, 
+					vaihtoehto3: {teksti: "vartionjohtaja", oikein: false}}
+	var kysymys3 = { teksti: "EVP", 
+	                vaihtoehto1: {teksti: "ei-vielä-partiolainen", oikein: true},
+					vaihtoehto2: {teksti: "ennenvanhaan-partiolainen", oikein: false}, 
+					vaihtoehto3: {teksti: "Etelä-Vantaan Partiolaiset", oikein: false}}				
+	var kysymys4 = { teksti: "KOLO", 
+	                vaihtoehto1: {teksti: "sudenpentujen tapaaminen", oikein: false},
+					vaihtoehto2: {teksti: "retkeilykohde", oikein: false}, 
+					vaihtoehto3: {teksti: "partion viikkotoiminnan paikka", oikein: true}}	
+	var kysymys5 = { teksti: "LPK", 
+	                vaihtoehto1: {teksti: "lippukunta", oikein: true},
+					vaihtoehto2: {teksti: "Lapin Partiopiirin kämppä", oikein: false}, 
+					vaihtoehto3: {teksti: "lippukunnan partiokouluttaja", oikein: false}}	
+	var kysymys6 = { teksti: "SP", 
+	                vaihtoehto1: {teksti: "Suomen Partiolaiset", oikein: true},
+					vaihtoehto2: {teksti: "Sipoon Partiopiiri", oikein: false}, 
+					vaihtoehto3: {teksti: "sudenpentu", oikein: false}}		
+	var kysymys7 = { teksti: "PARTIOLAISTEN MOTTO", 
+	                vaihtoehto1: {teksti: "ole valmis", oikein: true},
+					vaihtoehto2: {teksti: "valmiina auttamaan", oikein: false}, 
+					vaihtoehto3: {teksti: "autan tarvittaessa", oikein: false}}	
+	var kysymys8 = { teksti: "PJ", 
+	                vaihtoehto1: {teksti: "paras johtaja", oikein: false},
+					vaihtoehto2: {teksti: "partiojohtaja", oikein: true}, 
+					vaihtoehto3: {teksti: "puolijoukkueteltta", oikein: true}}		
+	var kysymys9 = { teksti: "PÄPA", 
+	                vaihtoehto1: {teksti: "päälliköistä paras", oikein: false},
+					vaihtoehto2: {teksti: "pääsäännöllisesti partiolainen", oikein: false}, 
+					vaihtoehto3: {teksti: "Pääkaupunkiseudun Partiolaiset", oikein: true}}
+	var kysymys10 = { teksti: "WOGGLE", 
+	                vaihtoehto1: {teksti: "huivikoriste", oikein: false},
+					vaihtoehto2: {teksti: "partiojohtajan osmonsolmu", oikein: true}, 
+					vaihtoehto3: {teksti: "rinkan koriste", oikein: false}}				
+
+	var kaikkikysymykset = [kysymys1, kysymys2, kysymys3, kysymys4, kysymys5, kysymys6, kysymys7, kysymys8, kyymys9, kysymys10];
+	
+	var valittukysymys = kaikkikysymykset[1];
+	
+	$( "#kysymys").html(valittukysymys.teksti);
+	$( "#vaihtoehto1 + label").html(valittukysymys.vaihtoehto1.teksti);
+	$( "#vaihtoehto2 + label").html(valittukysymys.vaihtoehto2.teksti);
+	$( "#vaihtoehto3 + label").html(valittukysymys.vaihtoehto3.teksti);
+});
+</script>
+</head>
 <body>
-<h1>AKELA</h1>
+<h1 id="kysymys"></h1>
 <p> </p>
 <form>
-<input type="radio" name="akela" value="sudenpentulauman johtaja">sudenpentulauman johtaja<br>
-<input type="radio" name="akela" value="vasaraa muistuttava työkalu">vasaraa muistuttava työkalu<br>
-<input type="radio" name="akela" value="vanhempainyhdistyksen puheenjohtaja">vanhempainyhdistyksen puheenjohtaja<br>
- </form>
-
- <button type="button">Seuraava</button>  
+<input id="vaihtoehto1" type="radio" name="akela" value="sudenpentulauman johtaja"></input>
+<label for="vaihtoehto1"></label><br>
+<input id="vaihtoehto2" type="radio" name="akela" value="vasaraa muistuttava työkalu"></input>
+<label for="vaihtoehto2"></label><br>
+<input id="vaihtoehto3" type="radio" name="akela" value="vanhempainyhdistyksen puheenjohtaja"></input>
+<label for="vaihtoehto3"></label><br>
+ </form><br>
+<img src="correct.jpg" alt="Correct" style="width:20px;height:20px"><br>
+<button type="button">Seuraava</button>  
 </body>
 </html>
