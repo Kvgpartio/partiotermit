@@ -1,0 +1,19 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -2,11 +2,13 @@
+ <head> 
+ <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+-<title>Osaatko partio sanat? </title> 
++<title> Tulokset- The End </title> 
+ </head> 
+ <body> 
+-<h1> Osaatko termit </h1> 
++<h1> 10/10 </h1> 
++<h1> Onneksi olkoon! Osaat termistösi täydellisesti! </h1> 
+ <br>
+-<button type="button">Aloita!</button> 
++<button type="button">Aloita alusta!</button> 
++<
+ </body> 
+ </html>
+\ No newline at end of file
