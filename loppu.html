@@ -21,6 +21,8 @@ $( document ).ready(function() {
 	$("#tulos").html(pisteet);
 	
 	
+	
+	
 	if (pisteet<4)
 		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
 	else if (pisteet<8)
@@ -29,7 +31,11 @@ $( document ).ready(function() {
 		näytäTekstit ("Melkein täydellistä","Koita vielä kerran!");
 	else 
 		näytäTekstit ("Onneksi olkoon!","Osaat termistösi täydellisesti!");
-	
+	if (pisteet>10) {
+		pisteet=0;
+		$("#tulos").html(pisteet);
+		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
+	}
 	
 	
 });	
