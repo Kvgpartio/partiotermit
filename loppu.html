@@ -22,20 +22,26 @@ $( document ).ready(function() {
 	
 	
 	
-	
-	if (pisteet<4)
+	if (pisteet<0) {
+		pisteet=0;
+		$("#tulos").html(pisteet);
+		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
+	}
+	else if (pisteet<4)
 		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
 	else if (pisteet<8)
 		näytäTekstit ("Alat jo lähestyä!","Koita vielä uudelleen!");
 	else if (pisteet<10)
 		näytäTekstit ("Melkein täydellistä","Koita vielä kerran!");
-	else 
+	else if (pisteet==10) 
 		näytäTekstit ("Onneksi olkoon!","Osaat termistösi täydellisesti!");
-	if (pisteet>10) {
+	else if (pisteet>10) {
 		pisteet=0;
 		$("#tulos").html(pisteet);
 		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
-	}
+		}
+	else 
+		näytäTeksti ("Hyvä yritys, muttei tarpeeksi hyvä :P")
 	
 	
 });	
