@@ -1,0 +1,55 @@
+﻿<html> 
+<head> 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<title> Tulokset- The End </title> 
+<script>
+$( document ).ready(function() {
+	var queryString = new Array();
+	if (queryString.length == 0) {
+		if (window.location.search.split('?').length > 1) {
+			var params = window.location.search.split('?')[1].split('&');
+			for (var i = 0; i < params.length; i++) {
+				var key = params[i].split('=')[0];
+				var value = decodeURIComponent(params[i].split('=')[1]);
+				queryString[key] = value;
+			}
+		}
+	}
+
+	var pisteet = queryString["pisteet"];
+	$("#tulos").html(pisteet);
+	
+	
+	if (pisteet<4)
+		näytäTekstit ("Hyvä yritys!","pystyt vielä parempaan!");
+	else if (pisteet<8)
+		näytäTekstit ("Alat jo lähestyä!","Koita vielä uudelleen!");
+	else if (pisteet<10)
+		näytäTekstit ("Melkein täydellistä","Koita vielä kerran!");
+	else 
+		näytäTekstit ("Onneksi olkoon!","Osaat termistösi täydellisesti!");
+	
+	
+	
+});	
+
+
+function näytäTekstit (otsikko, kuvaus) {
+		$( "#otsikko").html(otsikko);
+		$( "#kuvaus").html(kuvaus);
+
+}
+</script>
+</head> 
+<body> 
+<h1 id="otsikko">  </h1> 
+<h1> Sait <span id="tulos"></span>/10 p. </h1> 
+<h1 id="kuvaus"></h1>
+<br>
+<p> Lisätietoja löydät osoitteesta: <a href="http://www.partio.fi">http://www.partio.fi</a> </p>
+<p> Lisätietoja saat myös lähimmästä lippukunnastasi! </p>
+<a href="Kysymykset.html">Aloita alusta!</a> 
+
+</body> 
+</html>
