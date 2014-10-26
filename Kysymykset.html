@@ -77,6 +77,7 @@ $( document ).ready(function() {
 		
 		naytaOikeatVastaukset (valittukysymys);		
 	
+		$( ":radio" ).attr('disabled',true);
 		
 
 	});
@@ -88,7 +89,7 @@ $( document ).ready(function() {
 function nollaaLomake () {
 			$( ".correct").hide();
 			$( ":radio" ).prop('checked', false);
-
+			$( ":radio" ).attr('disabled',false);
 }
 function asetaKysymysTekstit(valittukysymys) {
 	
